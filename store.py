@@ -4,6 +4,34 @@ by: Troy Center, troycenter1@gmail.com, Coding Dojo Python fundamentals, June 20
 
 #pylint: disable=C0103
 
+productArray = []
+
+def addProduct(self, price, name, weight, brand, cost, status="for sale"):
+    '''This function will remove the product from the system
+    '''
+    self.price = price
+    self.name = name
+    self.weight = weight
+    self.brand = brand
+    self.cost = cost
+    self.status = status
+    productArray.append([self.name, self.brand, self.price,
+                         self.weight, self.cost, self.price])
+    # in real world, I would prompt the user for input to get this information.
+    # in this case, I am passing it in.
+
+def removeProduct(self):
+    '''This function will remove the product from the system
+    '''
+    pass
+    #prompt the person to enter the product name, remove it.
+
+def seeInventory(self):
+    '''This function will print a list of all the inventory at a given store.
+        Initially I have this working for one store, Bellevue only.
+    '''
+    print productArray
+
 class Stores(object):
     '''This is the stores class, which holds information about the stores.
     '''
@@ -14,7 +42,7 @@ class Stores(object):
         self.state = state
         self.zipcode = zipcode
         self.ownername = ownername
-
+    
     def storeInfo(self):
         '''This function displays all the Store information.
         '''
@@ -37,6 +65,34 @@ class Products(object):
         self.brand = brand
         self.cost = cost
         self.status = status
+        productArray.append([self.name, self.brand, self.price,
+                             self.weight, self.cost, self.price])
+
+    def addProduct(self, price, name, weight, brand, cost, status="for sale"):
+        '''This function will remove the product from the system
+        '''
+        self.price = price
+        self.name = name
+        self.weight = weight
+        self.brand = brand
+        self.cost = cost
+        self.status = status
+        productArray.append([self.name, self.brand, self.price,
+                            self.weight, self.cost, self.price])
+        # in real world, I would prompt the user for input to get this information.
+        # in this case, I am passing it in.
+
+def removeProduct(self):
+    '''This function will remove the product from the system
+    '''
+    pass
+    #prompt the person to enter the product name, remove it.
+
+def seeInventory(self):
+    '''This function will print a list of all the inventory at a given store.
+        Initially I have this working for one store, Bellevue only.
+    '''
+    print productArray
 
     def productInfo(self):
         '''This fucntion shows all the product details.
@@ -52,29 +108,8 @@ class Products(object):
         print "Status: ", self.status
         return self
 
-    def addProduct(self):
-        '''This function allows the user to enter a new product. 
-        '''
-        #prompt the person to enter some information... ???
-        #Sample string to add. 
 
-        #Products(499.99, "StudentModel", "5lbs", "Dell", 310.00
-
-    def removeProduct(self):
-        '''This function will remove the product from the system
-        '''
-        #prompt the person to enter the product name, remove it.
-
-    def seeInventory(self):
-        '''This function will print a list of all the inventory at a given store. 
-           Initially I have this working for one store, Bellevue only. 
-        '''
-        #need to prompt the user for the store. 
-        #can i print a list of options for the user? 
-        #can they select from the instances? 
-        #maybe just build this for one store to get the assignment done faster. 
-
-Bellevue = Stores("Bellevue", "10260 NE 25thst", "Bellevue", "WA", "98004")
+Bellevue = Stores("Bellevue", "10260 NE 25th St", "Bellevue", "WA", "98004")
 Bellevue.storeInfo()
 Everett = Stores("Everett", "805 80th Ave SW", "Everett", "WA", "98109")
 Everett.storeInfo()
@@ -112,4 +147,4 @@ smhdd.productInfo()
 lghdd = Products(299.99, "HDD240GB7200", "2lbs", "Seagate", 190.00)
 lghdd.productInfo()
 
-
+addProduct(19.99, "Screen Cleaner", "1lb", "Gelco", 12.00, "for sale")
